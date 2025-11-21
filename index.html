@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>GradeOS by Sasmit</title>
     
-    <!-- COOL ICON (Rocket) -->
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2583/2583344.png">
-    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/2583/2583344.png">
+    <!-- CUSTOM LOGO (Ensure logo.png is uploaded to your repo) -->
+    <link rel="icon" type="image/png" href="./logo.png">
+    <link rel="apple-touch-icon" href="./logo.png">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -119,10 +119,10 @@
             <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-70"></div>
             <div class="flex justify-between items-start">
                 <div>
-                    <h1 class="text-xl font-bold text-white flex items-center gap-2 tracking-tight">
-                        <!-- Rocket Icon and New Title -->
-                        <i class="ph-fill ph-rocket-launch text-cyan-400 animate-pulse-slow filter drop-shadow-[0_0_8px_rgba(0,210,255,0.5)]"></i> 
-                        <span>Grade<span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">OS</span> <span class="text-[10px] text-gray-500 font-mono font-normal ml-1">by Sasmit</span></span>
+                    <h1 class="text-xl font-bold text-white flex items-center gap-3 tracking-tight">
+                        <!-- CUSTOM LOGO INSERTED HERE -->
+                        <img src="./logo.png" alt="Logo" class="w-8 h-8 object-contain animate-pulse-slow filter drop-shadow-[0_0_8px_rgba(0,210,255,0.5)]">
+                        <span>Grade<span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">OS</span></span>
                     </h1>
                     <p class="text-[9px] text-gray-400 font-mono mt-2 leading-tight opacity-90">
                         "Sasmit hated the campus web app so he made his own to watch his marks decline."
@@ -173,7 +173,7 @@
         <!-- Footer Status -->
         <div class="p-4 border-t border-white/10 bg-black/20 backdrop-blur-md text-[9px] font-mono text-gray-500 flex justify-between items-center">
             <span>SYS: <span class="text-cyan-400 drop-shadow-[0_0_5px_rgba(0,210,255,0.5)]">ONLINE</span></span>
-            <span class="text-[8px] opacity-70">GradeOS</span>
+            <span class="text-[8px] opacity-70">GradeOS v6.2</span>
         </div>
     </aside>
 
@@ -368,7 +368,7 @@
             const sgpa = calculateSemesterSGPA(subs);
             document.getElementById('semester-sgpa-badge').innerHTML = `SGPA: <span class="text-white font-bold">${sgpa}</span>`;
             const container = document.getElementById('subjects-container'); container.innerHTML = '';
-            if(subs.length===0) { container.innerHTML = `<div class="flex flex-col items-center justify-center py-20 opacity-50 text-gray-400"><i class="ph-duotone ph-ghost text-5xl mb-4 animate-bounce"></i><div class="font-mono text-sm">NO_DATA</div></div>`; return; }
+            if(subs.length===0) { container.innerHTML = `<div class="flex flex-col items-center justify-center py-20 opacity-50 text-gray-400"><i class="ph-duotone ph-ghost text-5xl mb-4 animate-bounce"></i><div class="font-mono text-sm">NO_DATA_FOUND</div></div>`; return; }
 
             subs.forEach((sub, idx) => {
                 const perf = parseMarks(sub.marks);
